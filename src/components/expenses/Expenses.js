@@ -19,7 +19,7 @@ function Expenses(props) {
         <Card className={'expenses'}>
             <ExpensesFilter selected={filteredY} onFilterChange={filterChangeHandler}/>
 
-            {expenses.map((ex) => <ExpenseItem expense={ex}/>)}
+            {expenses.map((ex) => <ExpenseItem key={ex.id} expense={ex}/>)}
         </Card>
     );
 }
